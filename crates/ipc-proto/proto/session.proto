@@ -1,3 +1,0 @@
-syntax = "proto3";
-package aios;
-message Placeholder { string id = 1; }
