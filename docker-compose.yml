@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: infra/docker/gateway.Dockerfile
+    command: uvicorn services.api_gateway.app.main:app --host 0.0.0.0 --port 8080
+    ports:
+      - "8080:8080"
+
+  planner-service:
+    build:
+      context: .
+      dockerfile: infra/docker/planner.Dockerfile
+    command: uvicorn services.planner_service.app.main:app --host 0.0.0.0 --port 8100
+    ports:
+      - "8100:8100"
+
+  asr-service:
+    build:
+      context: .
+      dockerfile: infra/docker/asr.Dockerfile
+    command: uvicorn services.asr_service.app.main:app --host 0.0.0.0 --port 8130
+    ports:
+      - "8130:8130"
+
+  tts-service:
+    build:
+      context: .
+      dockerfile: infra/docker/tts.Dockerfile
+    command: uvicorn services.tts_service.app.main:app --host 0.0.0.0 --port 8140
+    ports:
+      - "8140:8140"
