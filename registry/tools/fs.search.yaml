@@ -1,0 +1,24 @@
+id: fs.search
+name: Search Files
+description: Search files by glob, text, or metadata filters
+version: 1.0.0
+executor: rust
+entrypoint: file_tools::search
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    root:
+      type: string
+    pattern:
+      type: string
+permissions:
+  - type: fs.read
+    scope: user_selected
+dry_run: true
+rollback:
+  supported: false
+ui:
+  confirm_title: "Search files?"
+  confirm_message: "AI will search for files in the selected folder."
+  show_diff: false

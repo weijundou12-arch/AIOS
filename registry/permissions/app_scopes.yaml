@@ -1,0 +1,3 @@
+allowed_apps:
+  - org.mozilla.firefox
+  - org.gnome.Nautilus

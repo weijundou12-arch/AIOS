@@ -1,0 +1,29 @@
+id: fs.rename_batch
+name: Batch Rename Files
+description: Rename multiple files using structured rename rules
+version: 1.0.0
+executor: rust
+entrypoint: file_tools::rename
+risk_level: medium
+input_schema:
+  type: object
+  properties:
+    files:
+      type: array
+      items:
+        type: string
+    rename_rule:
+      type: string
+permissions:
+  - type: fs.read
+    scope: user_selected
+  - type: fs.write
+    scope: user_selected
+dry_run: true
+rollback:
+  supported: true
+  mode: rename_mapping
+ui:
+  confirm_title: "Batch rename files?"
+  confirm_message: "AI will rename the selected files."
+  show_diff: true

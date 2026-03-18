@@ -1,0 +1,7 @@
+-r base.txt
+transformers
+sentence-transformers
+faster-whisper
+piper-tts
+llama-cpp-python
+tesseract

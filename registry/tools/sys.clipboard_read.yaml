@@ -1,0 +1,20 @@
+id: sys.clipboard_read
+name: Read Clipboard
+description: Read current clipboard text
+version: 1.0.0
+executor: rust
+entrypoint: system_tools::clipboard
+risk_level: medium
+input_schema:
+  type: object
+  properties: {}
+permissions:
+  - type: clipboard.read
+    scope: session
+dry_run: false
+rollback:
+  supported: false
+ui:
+  confirm_title: "Read clipboard?"
+  confirm_message: "AI will read current clipboard contents."
+  show_diff: false

@@ -1,0 +1,32 @@
+id: fs.merge_pdf
+name: Merge PDF Files
+description: Merge multiple PDF files into one output document
+version: 1.0.0
+executor: rust
+entrypoint: file_tools::merge_pdf
+risk_level: medium
+input_schema:
+  type: object
+  properties:
+    input_files:
+      type: array
+      items:
+        type: string
+    output_file:
+      type: string
+    add_toc_page:
+      type: boolean
+  required: [input_files, output_file]
+permissions:
+  - type: fs.read
+    scope: user_selected
+  - type: fs.write
+    scope: user_selected
+dry_run: true
+rollback:
+  supported: true
+  mode: delete_created_file
+ui:
+  confirm_title: "Merge PDF files?"
+  confirm_message: "AI will merge selected PDF files and create a new output file."
+  show_diff: false

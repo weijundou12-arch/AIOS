@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "confirm_title": {
+      "type": "string"
+    }
+  }
+}

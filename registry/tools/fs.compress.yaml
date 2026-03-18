@@ -1,0 +1,29 @@
+id: fs.compress
+name: Compress Files
+description: Compress selected files into an archive
+version: 1.0.0
+executor: rust
+entrypoint: file_tools::compress
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    input_paths:
+      type: array
+      items:
+        type: string
+    output_archive:
+      type: string
+permissions:
+  - type: fs.read
+    scope: user_selected
+  - type: fs.write
+    scope: user_selected
+dry_run: true
+rollback:
+  supported: true
+  mode: delete_created_file
+ui:
+  confirm_title: "Compress files?"
+  confirm_message: "AI will create a new archive."
+  show_diff: false

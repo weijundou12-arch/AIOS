@@ -1,0 +1,26 @@
+id: mail.compose_draft
+name: Compose Mail Draft
+description: Create a draft email in a local mail client
+version: 1.0.0
+executor: rust
+entrypoint: app_connectors::thunderbird
+risk_level: medium
+input_schema:
+  type: object
+  properties:
+    to:
+      type: string
+    subject:
+      type: string
+    body:
+      type: string
+permissions:
+  - type: mail.draft
+    scope: session
+dry_run: true
+rollback:
+  supported: false
+ui:
+  confirm_title: "Create email draft?"
+  confirm_message: "AI will open a draft in the mail client."
+  show_diff: true

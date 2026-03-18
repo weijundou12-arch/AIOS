@@ -1,0 +1,3 @@
+high_risk_tools:
+  - fs.rename_batch
+  - sys.clipboard_read

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "supported": {
+      "type": "boolean"
+    },
+    "mode": {
+      "type": "string"
+    }
+  }
+}

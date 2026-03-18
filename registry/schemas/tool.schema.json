@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "input_schema",
+    "permissions"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "permissions": {
+      "type": "array"
+    },
+    "input_schema": {
+      "type": "object"
+    }
+  }
+}

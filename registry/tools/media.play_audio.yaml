@@ -1,0 +1,22 @@
+id: media.play_audio
+name: Play Audio
+description: Play a local audio file
+version: 1.0.0
+executor: rust
+entrypoint: media_tools::play_audio
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    path:
+      type: string
+permissions:
+  - type: fs.read
+    scope: user_selected
+dry_run: false
+rollback:
+  supported: false
+ui:
+  confirm_title: "Play audio?"
+  confirm_message: "AI will play the selected audio file."
+  show_diff: false

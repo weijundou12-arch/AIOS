@@ -1,0 +1,4 @@
+[project]
+name = "aios-sdk"
+version = "0.1.0"
+description = "Python SDK for AIOS tools"

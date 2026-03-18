@@ -1,0 +1,22 @@
+id: ocr.extract_text
+name: OCR Extract Text
+description: Extract text from images or scanned PDFs
+version: 1.0.0
+executor: http
+entrypoint: ocr-service:/extract
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    path:
+      type: string
+permissions:
+  - type: fs.read
+    scope: user_selected
+dry_run: false
+rollback:
+  supported: false
+ui:
+  confirm_title: "Run OCR?"
+  confirm_message: "AI will extract text from the selected file."
+  show_diff: false

@@ -1,0 +1,22 @@
+id: sys.open_app
+name: Open Application
+description: Open an application by desktop id
+version: 1.0.0
+executor: rust
+entrypoint: system_tools::open_app
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    app_id:
+      type: string
+permissions:
+  - type: app.launch
+    scope: session
+dry_run: false
+rollback:
+  supported: false
+ui:
+  confirm_title: "Open application?"
+  confirm_message: "AI will launch the requested application."
+  show_diff: false

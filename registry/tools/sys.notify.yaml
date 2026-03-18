@@ -1,0 +1,24 @@
+id: sys.notify
+name: Show Notification
+description: Send a local desktop notification
+version: 1.0.0
+executor: rust
+entrypoint: system_tools::notify
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    title:
+      type: string
+    body:
+      type: string
+permissions:
+  - type: notify.send
+    scope: session
+dry_run: false
+rollback:
+  supported: false
+ui:
+  confirm_title: "Send notification?"
+  confirm_message: "AI will send a local desktop notification."
+  show_diff: false

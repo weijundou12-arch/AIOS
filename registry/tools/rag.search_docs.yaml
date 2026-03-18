@@ -1,0 +1,22 @@
+id: rag.search_docs
+name: Search Indexed Documents
+description: Query local indexed knowledge with hybrid retrieval
+version: 1.0.0
+executor: http
+entrypoint: rag-service:/retrieve
+risk_level: low
+input_schema:
+  type: object
+  properties:
+    query:
+      type: string
+permissions:
+  - type: rag.query
+    scope: session
+dry_run: false
+rollback:
+  supported: false
+ui:
+  confirm_title: "Search documents?"
+  confirm_message: "AI will search indexed local knowledge."
+  show_diff: false

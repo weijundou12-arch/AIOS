@@ -1,0 +1,4 @@
+-r base.txt
+faiss-cpu
+rank-bm25
+numpy
