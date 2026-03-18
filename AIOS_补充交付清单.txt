@@ -1,0 +1,16 @@
+AIOS 补充交付清单
+
+已上传的项目骨架：
+1. /mnt/data/aios-ubuntu-scaffold.zip
+2. /mnt/data/aios-ubuntu-scaffold.tar.gz
+3. /mnt/data/aios-ubuntu/README.md
+
+本次新增上传：
+4. /mnt/data/AIOS_项目任务书_专业详细版.docx
+5. /mnt/data/AIOS_项目任务书_专业详细版.pdf
+6. /mnt/data/AIOS_项目任务书_专业详细版.md
+7. /mnt/data/aios-task-docs-pack.zip
+
+说明：
+- 项目骨架压缩包已包含代码目录、服务骨架、registry、configs、infra、tests 等。
+- 任务书文档用于团队执行、对外沟通、项目立项与阶段验收。
