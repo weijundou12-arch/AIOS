@@ -1,0 +1,11 @@
+[Unit]
+Description=aios-rag
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aios-rag
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

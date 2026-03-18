@@ -1,0 +1,9 @@
+{
+  "filesystem": [
+    "home"
+  ],
+  "sockets": [
+    "x11",
+    "wayland"
+  ]
+}

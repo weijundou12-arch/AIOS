@@ -1,0 +1,11 @@
+[Unit]
+Description=aios-agentd
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aios-agentd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

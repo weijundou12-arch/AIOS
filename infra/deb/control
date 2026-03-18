@@ -1,0 +1,5 @@
+Package: aios-ubuntu
+Version: 0.1.0
+Architecture: amd64
+Maintainer: AIOS
+Description: AIOS Ubuntu scaffold

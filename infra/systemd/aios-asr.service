@@ -1,0 +1,11 @@
+[Unit]
+Description=aios-asr
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aios-asr
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

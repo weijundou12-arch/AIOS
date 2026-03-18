@@ -1,0 +1,11 @@
+[Unit]
+Description=aios-gateway
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aios-gateway
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

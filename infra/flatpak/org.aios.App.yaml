@@ -1,0 +1,3 @@
+app-id: org.aios.App
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
