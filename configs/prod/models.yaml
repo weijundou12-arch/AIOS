@@ -1,0 +1,2 @@
+llm_fast: qwen2.5-7b-instruct
+llm_planner: qwen2.5-14b-instruct

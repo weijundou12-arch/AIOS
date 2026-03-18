@@ -1,0 +1,7 @@
+{
+  "productName": "AIOS Command Palette",
+  "version": "0.1.0",
+  "build": {
+    "frontendDist": "../dist"
+  }
+}

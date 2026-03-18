@@ -1,0 +1,16 @@
+[workspace]
+members = [
+  "crates/common",
+  "crates/ipc-proto",
+  "crates/agentd",
+  "crates/tool-executor",
+  "crates/policy-engine",
+  "crates/auditd",
+  "crates/rollback-engine",
+  "crates/sandbox-runner",
+  "crates/file-tools",
+  "crates/media-tools",
+  "crates/system-tools",
+  "crates/app-connectors"
+]
+resolver = "2"

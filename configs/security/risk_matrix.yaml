@@ -1,0 +1,2 @@
+fs.rename_batch: medium
+sys.clipboard_read: medium
